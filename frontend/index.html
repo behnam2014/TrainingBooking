@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>wokshop booking web application</title>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <!--script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script> 
+    </head>
+
+    <body>
+   
+        <div class="container">
+          <h1>Booking Table</h1>
+          <p>Review on the offerd workshops </p>
+
+          <div id="table" class="table-editable">
+            <span class="table-add glyphicon glyphicon-plus"></span>
+            <table id="records_training" class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th>ID</th>
+                <th>Description</th>
+                <th>Name</th>
+                <th>Price</th>
+              </tr>
+             </thead>
+            </table>
+          </div>
+          
+          <div id="records_appoinment" style="display:none;">
+          
+          <h2> Time slots: </h2>
+           <div class="row">
+                <div class="bg-info text-white col-2"></div>
+                <div class="bg-info text-white col-4">FROM</div>
+                <div class="bg-info text-white col-4">TO</div>
+                <div class="bg-info text-white col-2">PERIOD</div>
+           </div>
+            <!---------------------------------------------------------------->
+           
+          </div>
+        
+        <br><br>
+       
+         <div  id="form_book_div" style="display:none;" class="row">
+            <form  id="form_book" class="form-inline">  
+              <label class="sr-only" for="inlineFormInputName2">Name</label>
+              <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" name="name" placeholder="Jane Doe">
+
+              <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
+              <div class="input-group mb-2 mr-sm-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">@</div>
+                </div>
+                <input type="text" class="form-control" id="inlineFormInputGroupUsername2" name="email" placeholder="Username">
+              </div>
+
+              <input type="hidden" class="form-control" id="training_id" name="training" value="">
+              <input type="hidden" class="form-control" id="appoinment_id" name="appoinment" value="">
+              
+               <input id="change_button" type="button" value="submit" class="btn btn-info mb-2" onClick="book('smth');"/>
+                   
+            </form>
+          </div> 
+            
+        </div>
+    </body>
+</html>
