@@ -2,12 +2,12 @@
 
 Some examples for Rest-api:
 
-1- GET http://localhost:8080/api/trainings
-2- GET http://localhost:8080/api/bookings
-3- GET http://localhost:8080/api/training/1
-4- GET http://localhost:8080/api/booking/10
-5- Get http://localhost:8080/api/trainings?startdate=2020-05-04&enddate=2020-06-04
-6- Post http://localhost:8080/api/training
+1. GET http://localhost:8080/api/trainings
+2. GET http://localhost:8080/api/bookings
+3. GET http://localhost:8080/api/training/1
+4. GET http://localhost:8080/api/booking/10
+5. Get http://localhost:8080/api/trainings?startdate=2020-05-04&enddate=2020-06-04
+6. Post http://localhost:8080/api/training
 body:
  {
         "appointments": [
@@ -30,10 +30,10 @@ body:
         "price": "220"
  }
 
-7- PUT http://localhost:8080/api/training/5
+7. PUT http://localhost:8080/api/training/5
 {
 	"name": "jupyter 444"
 }
 
-8- if you placed the front-end in htdocs (apache):
+8. if you placed the front-end in htdocs (apache):
 http://localhost/index.html
