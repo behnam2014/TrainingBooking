@@ -57,7 +57,7 @@ public class Appointment {
 	}
 
 	public void setPeriod() {
-		//TODO check later why not correct
+
 		this.period = Period.between(startDate,endDate).getDays();
 
 	}

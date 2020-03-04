@@ -14,11 +14,11 @@ public class Booking {
 	private @Id @GeneratedValue Long id;
 	
 	private String user;
-	private String training;
-	private String appoinment;
+	private Long training;
+	private Long appoinment;
 	
 	
-	public Booking(String user, String training,String appoinment) {
+	public Booking(String user, Long training, Long appoinment) {
 		  
 		  this.setUser(user);
 		  this.setTraining(training);
@@ -41,19 +41,19 @@ public class Booking {
 		this.user = user;
 	}
 
-	public String getTraining() {
+	public Long getTraining() {
 		return training;
 	}
 
-	public void setTraining(String training) {
+	public void setTraining(Long training) {
 		this.training = training;
 	}
 
-	public String getAppoinment() {
+	public Long getAppoinment() {
 		return appoinment;
 	}
 
-	public void setAppoinment(String appoinment) {
+	public void setAppoinment(Long appoinment) {
 		this.appoinment = appoinment;
 	}
 

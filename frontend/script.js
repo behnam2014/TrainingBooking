@@ -10,8 +10,8 @@ $(document).ready(function() {
           trHTML += '<tr class="table-row" id='+item.id+'><td>' + item.id+'</td><td contenteditable="true">' + item.name+'</td><td>' + item.description + '</td><td>' + item.price + '&nbsp;Euro</td></tr>';
           $.each(item.appointments, function (j, appointment) {
               id = "appoinment-row"+item.id
-              appid = 'appoinment__training_'+appointment.id+'_'+item.id
-              termin += '<div  id='+id+' style="display: none;" class="row"><div class="col-2"><input type="checkbox" id='+appid+' value='+appointment.id+'></div><div class="col-4">'+appointment.startDate+'</div><div class="col-4">'+appointment.endDate+'</div><div class="col-2">'+appointment.period+'&nbsp;days</div></div>';
+              appid = 'appoinment_training_'+appointment.id+'_'+item.id
+              termin += '<div  id='+id+' style="display: none;" class="row"><div class="col-2"><input type="radio" name="course" id='+appid+' value='+appointment.id+'></div><div class="col-4">'+appointment.startDate+'</div><div class="col-4">'+appointment.endDate+'</div><div class="col-2">'+appointment.period+'&nbsp;days</div></div>';
           });
     });
     
@@ -55,10 +55,21 @@ function book(sd){
         obj[item.name] = item.value;
         return obj;
     }, {});
-
-    console.log(data.name, data.email, data.training, data.appoinment);
     
-    var markers = { "user": data.name+"@"+data.email, "training": data.training,"appoinment": data.appoinment};
+    var radios = document.getElementsByName('course');
+    for (var i = 0, length = radios.length; i < length; i++) {
+    if (radios[i].checked) {
+        // do whatever you want with the checked radio
+        var appoint=radios[i].value;
+
+        // only one radio can be logically checked, don't check the rest
+        break;
+    }
+    }
+
+    console.log(data.emailID, data.training, appoint);
+    
+    var markers = { "user": data.emailID, "training": data.training,"appoinment": appoint};
 
      
      $.ajax({

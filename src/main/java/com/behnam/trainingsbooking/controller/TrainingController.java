@@ -111,6 +111,8 @@ public class TrainingController {
 			return trainingRepository.save(newTraining);
 		});
 	}
+	
+
 
 	@DeleteMapping("/training/{id}")
 	void deleteTraining(@PathVariable Long id) {

@@ -59,7 +59,8 @@ public class BookingController {
 	@CrossOrigin(origins = "*")
 	@PostMapping(value="/booking",consumes = "application/json", produces = "application/json")
 	Booking newTraining(@RequestBody Booking newBooking) {
-		return bookingRepository.save(newBooking);
+			return bookingRepository.save(newBooking);
+
 	}
 
 			 
