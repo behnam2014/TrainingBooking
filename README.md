@@ -1,6 +1,13 @@
 # TrainingBooking
 
-Some examples for Rest-api:
+## Technologies for the impelementation
+
+* Spring boot and MVC
+* H2 in-memory database, and access via JPA
+* Ajax, javascript, html, bootstrap
+
+
+## Some examples for Rest-api:
 
 1. GET http://localhost:8080/api/trainings
 2. GET http://localhost:8080/api/bookings
